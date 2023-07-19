@@ -1,0 +1,38 @@
+.hobies {
+    height: 100vh !important;
+    width: 100% !important;
+    margin: 10px;
+    background-size: cover;
+    background-position: center; 
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+
+  }
+  
+  .hobies__title {
+    
+    // height: 10%;
+    width: auto;
+    margin: 5% auto;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(250, 248, 248, 0.5);
+    h1 {
+      font-size: 50px;
+    }
+
+  }
+
+  .hobies__cards{
+
+    height: 100% !important;
+    width: 100%;
+    margin-bottom: 10rem;
+    overflow: hidden;
+    
+  }
+
+
+  
+

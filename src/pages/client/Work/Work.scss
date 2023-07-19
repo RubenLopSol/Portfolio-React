@@ -1,0 +1,38 @@
+.work {
+    
+    height: 100vh !important;
+    width: 100% !important;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    
+    
+    
+    .work__title{
+        width: 100%;
+        height: 10vh !important;
+        color: white;
+        text-align: center;
+        text-shadow: 2px 2px 4px rgba(250, 248, 248, 0.5);
+        h1 {
+            margin: 5rem !important;
+            font-size: 50px;
+          }
+    }
+    
+    .work__list{
+        height: 100vh !important;
+        width: 100%;
+        margin-bottom: 10rem;
+        overflow: hidden;
+        
+    }
+
+
+
+
+
+    
+}

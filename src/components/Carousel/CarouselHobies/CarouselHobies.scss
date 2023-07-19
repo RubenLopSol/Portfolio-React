@@ -1,0 +1,55 @@
+$primary-color: #cfb2b2;
+$color-2: #8a5a8291;
+$color-3: gray;
+$color-4: black;
+
+.hobies {
+    height: 90%;
+    width: 100%;
+ 
+    .slick-slide .card {
+
+      height: 100% !important;
+      width: 65% !important;
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      margin: auto !important;
+      background-color: transparent;
+
+     
+      
+
+      }
+    .slick-slide .card .image img {
+
+      max-height: 400px;
+      max-width: 400px;
+
+      
+    }
+    .slick-slide .card .header {
+    font-size: 30px !important;
+    color: white !important;
+    }
+
+    .slick-slide .card .description {
+      height: 100%;
+      width: 100%;
+      font-size: 20px !important;
+      color: white !important;
+      
+      
+    }
+    
+    .slick-prev {
+      top: 20%;
+      left: 14%;
+    }
+    .slick-prev, .slick-next{
+      top: 20%;
+      right: 14%;
+
+    }
+
+  }

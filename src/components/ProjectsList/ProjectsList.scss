@@ -1,0 +1,91 @@
+$primary-color: #cfb2b2;
+$color-2: #8a5a8291;
+$color-3: gray;
+$color-4:#eeecec;
+$color-5:#ccc;
+$color-text: black;
+
+.projects-list{
+   
+    width: 70%;
+    margin: auto;
+    border-bottom: 2px solid $color-5 !important;
+    
+    
+    
+    &__table {
+        
+        overflow: scroll;
+        height: 100vh !important;
+        width: 100% !important;
+        overflow: hidden;
+        
+
+        @media (min-width: 768px) {
+            span{
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            .header{
+                display: none !important;                
+            }
+        }
+        
+
+        .header{
+            background-color: $color-5;
+            font-size: 20px;
+            
+        }
+        .table {
+            text-align: center !important;
+            background-color: transparent !important;
+            border: 2px solid $color-5 !important;
+            color: white !important;
+            font-size: 20px !important;
+        }
+        .row{
+            border-bottom: 2px solid $color-5 !important;
+        }
+    }
+
+    &__modal{
+        border-radius: 4dvh !important;
+        background-color: $primary-color !important;
+        border: 5px solid $color-text !important;
+
+        .header {
+            font-size: 24px !important;
+            color: $color-text !important;
+            background-color: $primary-color !important;
+            padding: 10px !important;
+            border-bottom: 1px solid $color-5 !important;
+            border-radius: 4dvh !important;
+            text-align: center;
+            
+        }
+      
+        .content {
+            padding: 20px !important;
+            background-color: $color-4 !important;
+            font-size: 20px !important;
+            border-radius: 4dv !important;            
+        }
+        
+        .actions {
+            display: flex !important;
+            justify-content: flex-end !important;
+            padding: 10px !important;
+            background-color: $primary-color !important;
+            border-radius: 4dvh !important;
+        }
+        
+        .actions button {
+            font-size: 20px !important;
+        }
+
+    }
+}

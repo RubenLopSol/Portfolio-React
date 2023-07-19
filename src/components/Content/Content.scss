@@ -1,0 +1,8 @@
+$primary-color: #cfb2b2;
+$color-2: #8a5a8291;
+$color-3: gray;
+
+.content{
+    overflow: hidden;
+    background-image: linear-gradient(315deg, $primary-color 0%, black 74%);
+}

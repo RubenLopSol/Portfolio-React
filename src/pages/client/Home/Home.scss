@@ -1,0 +1,38 @@
+.home {
+  height: 100vh !important;
+  width: 100% !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+      
+  }
+  
+  .home__title {
+    margin: 10%;
+    h1 {
+      font-size: 50px;
+      text-shadow: 2px 2px 4px rgba(7, 7, 7, 0.5);
+    }
+  }
+  
+  .home__text {
+
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    font-size: 20px;
+
+    p {
+      font-size: x-large;
+      font-weight: bold;
+    }
+
+    
+  }
+
+  
+  
+  
+  
+  

@@ -1,0 +1,32 @@
+.education {
+
+    height: 100vh !important;
+    width: 100% !important;
+    margin: 10px;
+    overflow: scroll;
+
+    
+    &__title{
+        
+        
+        color: white;
+        text-align: center;
+        text-shadow: 2px 2px 4px rgba(250, 248, 248, 0.5);
+        margin-top: 8%;
+        h1 {
+            font-size: 50px;
+            
+        }
+
+    }
+
+    &__list{
+        
+        
+        overflow: scroll;
+        margin-top: 8%;
+        margin-bottom: 10rem;
+        overflow: hidden;
+    }
+    
+}
