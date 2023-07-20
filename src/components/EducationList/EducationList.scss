@@ -8,9 +8,42 @@ $color-text: black;
 .education-list{
 
     
-    overflow: hidden;
-    margin: auto !important;
-    width:75%;
-    height: 100% !important;
+    @media (min-width: 768px) {
+        span{
+            display: none;
+        }
+    }
 
+    @media (max-width: 768px) {
+
+        .header{
+            display: none !important;                
+        }
+    }
+   
+    table.ui.table{
+        width: 70%;
+        margin: auto;
+        background-color: transparent;
+        border: 3px solid $color-5;
+        color: $color-4;
+        font-size: 20px;
+        thead.header{
+            th{
+                background-color: $color-5;
+                font-size: 20px;
+                text-align: center;
+                
+            }
+        }
+        
+        tbody{
+            border: 5px solid $color-5 !important;
+            tr{
+                border-bottom: 3px solid $color-5 !important;
+                text-align: center;
+                
+            }
+        }
+    }
 }

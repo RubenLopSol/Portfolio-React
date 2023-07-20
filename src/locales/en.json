@@ -1,9 +1,11 @@
 {
     "Work Experience": "Work Experience",
+    "Work": "Work",
     "About me": "About me",
     "Education": "Education",
     "Projects": "Projects",
     "Contact Me": "Contact Me",
+    "Contact": "Contact",
     "Name": "Name",
     "Message": "Message",
     "Submit": "Submit",
@@ -15,5 +17,7 @@
     "Close": "Close",
     "Company": "Company",
     "Year": "Year",
-    "Position": "Position"
+    "Position": "Position",
+    "Course": "Course",
+    "Certificate": "Certificate"
 }

@@ -6,49 +6,43 @@ $color-5:#ccc;
 $color-text: black;
 
 .projects-list{
-   
-    width: 70%;
-    margin: auto;
-    border-bottom: 2px solid $color-5 !important;
-    
-    
-    
-    &__table {
-        
-        overflow: scroll;
-        height: 100vh !important;
-        width: 100% !important;
-        overflow: hidden;
-        
 
-        @media (min-width: 768px) {
-            span{
-                display: none;
-            }
+    @media (min-width: 768px) {
+        span{
+            display: none;
         }
+    }
 
-        @media (max-width: 768px) {
-
-            .header{
-                display: none !important;                
-            }
-        }
-        
+    @media (max-width: 768px) {
 
         .header{
-            background-color: $color-5;
-            font-size: 20px;
-            
+            display: none !important;                
         }
-        .table {
-            text-align: center !important;
-            background-color: transparent !important;
-            border: 2px solid $color-5 !important;
-            color: white !important;
-            font-size: 20px !important;
+    }
+   
+    table.ui.table{
+        width: 70%;
+        margin: auto;
+        background-color: transparent;
+        border: 3px solid $color-5;
+        color: $color-4;
+        font-size: 20px;
+        thead.header{
+            th{
+                background-color: $color-5;
+                font-size: 20px;
+                text-align: center;
+                
+            }
         }
-        .row{
-            border-bottom: 2px solid $color-5 !important;
+        
+        tbody{
+            border: 5px solid $color-5 !important;
+            tr{
+                border-bottom: 3px solid $color-5 !important;
+                text-align: center;
+                
+            }
         }
     }
 

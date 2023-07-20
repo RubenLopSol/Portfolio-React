@@ -7,54 +7,50 @@ $color-text: black;
 
 .work-list{
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto 20px !important;
-    height: 100% !important;
-    
-    @media (min-width: 768px) {
-        span {
-            display: none;
-        }
-    }
-      
     img{
         width: 50px;
         height: 50px;
         margin: auto;
     }
 
-    .ui.fixed.table {
-        text-align: center !important;
-        background-color: transparent !important;
-        border: 2px solid $color-5 !important;
-        color: white !important;
-        font-size: 20px !important;
-        width: 80%;
-
-        tr.row {
-            border: 2px solid $color-5 !important;
+    @media (min-width: 768px) {
+        span{
+            display: none;
         }
-        td {
-            @media (min-width: 768px) {
+    }
+
+    @media (max-width: 768px) {
+
+        .header{
+            display: none !important;                
+        }
+    }
+   
+    table.ui.table{
+        width: 70%;
+        margin: auto;
+        background-color: transparent;
+        border: 3px solid $color-5;
+        color: $color-4;
+        font-size: 20px;
+        thead.header{
+            th{
+                background-color: $color-5;
+                font-size: 20px;
+                text-align: center;
                 
-                border-bottom: 2px solid $color-5 !important;
             }
         }
-
-        tbody {
-            border: 2px solid $color-5 !important;
-        }
         
-        @media (max-width: 768px) {
-            thead.header {
-                display: none;
+        tbody{
+            border: 5px solid $color-5 !important;
+            tr{
+                border-bottom: 3px solid $color-5 !important;
+                text-align: center;
+                
             }
         }
     }
-       
-
 
     &__modal{
         border-radius: 4dvh !important;
