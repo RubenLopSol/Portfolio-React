@@ -1,3 +1,11 @@
+$primary-color: #cfb2b2;
+$color-2: #8a5a8291;
+$color-3: gray;
+$color-4:#eeecec;
+$color-5:#000000;
+$color-6: #552e4e91;
+
+
 .education {
 
     height: 100vh !important;
@@ -9,9 +17,9 @@
     &__title{
         
         
-        color: white;
+        color: $primary-color;
         text-align: center;
-        text-shadow: 2px 2px 4px rgba(250, 248, 248, 0.5);
+        text-shadow: 8px 8px 14px $color-2;
         margin-top: 8%;
         h1 {
             font-size: 50px;

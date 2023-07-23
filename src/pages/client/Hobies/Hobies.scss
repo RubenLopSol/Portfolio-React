@@ -1,3 +1,11 @@
+$primary-color: #cfb2b2;
+$color-2: #8a5a8291;
+$color-3: gray;
+$color-4:#eeecec;
+$color-5:#000000;
+$color-6: #552e4e91;
+
+
 .hobies {
     height: 100vh !important;
     width: 100% !important;
@@ -16,8 +24,8 @@
     // height: 10%;
     width: auto;
     margin: 5% auto;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(250, 248, 248, 0.5);
+    color: $primary-color;
+    text-shadow: 8px 8px 14px $color-2;
     h1 {
       font-size: 50px;
     }
@@ -28,8 +36,9 @@
 
     height: 100% !important;
     width: 100%;
-    margin-bottom: 10rem;
-    overflow: hidden;
+    margin-top: 10%;
+    overflow: auto;
+    overflow-x: hidden;
     
   }
 

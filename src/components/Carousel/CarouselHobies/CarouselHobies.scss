@@ -1,11 +1,13 @@
 $primary-color: #cfb2b2;
 $color-2: #8a5a8291;
 $color-3: gray;
-$color-4: black;
-
+$color-4:#eeecec;
+$color-5:#000000;
+$color-6: #552e4e91;
 .hobies {
     height: 90%;
     width: 100%;
+
  
     .slick-slide .card {
 
@@ -16,29 +18,29 @@ $color-4: black;
       align-items: center !important;
       margin: auto !important;
       background-color: transparent;
+      box-shadow: none !important;
 
-     
       
-
-      }
+      
+    }
     .slick-slide .card .image img {
 
       max-height: 400px;
       max-width: 400px;
+      border-radius: 4dvh;
 
       
     }
     .slick-slide .card .header {
-    font-size: 30px !important;
-    color: white !important;
+      font-size: 30px !important;
+      color: white !important;
     }
-
+    
     .slick-slide .card .description {
       height: 100%;
       width: 100%;
       font-size: 20px !important;
-      color: white !important;
-      
+      color: white !important;   
       
     }
     
@@ -51,5 +53,14 @@ $color-4: black;
       right: 14%;
 
     }
+
+    .slick-dots{
+      bottom:-20px !important;
+    }
+    .slick-dots li button:before {
+      color: $color-4 !important;
+    }
+
+
 
   }

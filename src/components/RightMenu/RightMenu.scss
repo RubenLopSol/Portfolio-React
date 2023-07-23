@@ -11,13 +11,17 @@ $color-6: #552e4e91;
     height: 100%;
     overflow: hidden;
     padding: 8px;
+    box-shadow: none;
+
 
 
 
     div.ui.borderless.vertical.side.menu{
         
         background-color: $primary-color;
-        border: transparentize($color: $color-5, $amount: 0);
+        border: transparentize($color: $primary-color, $amount: 0);
+        box-shadow: none;
+        
     }
 
 
@@ -31,6 +35,7 @@ $color-6: #552e4e91;
         margin-top: 40% !important;
         padding-top: 10px;
         text-shadow: 2px 2px 4px(0, 0, 0, 0.6);
+        background: none;
 
         &:hover {
             .item-title {
@@ -62,7 +67,6 @@ $color-6: #552e4e91;
                 }
             }
         }    
-
         a.item{
             background-color:$primary-color;
             height: 12%;
@@ -70,9 +74,13 @@ $color-6: #552e4e91;
             margin-left: 20px;
             margin-top: 5px;
             &:hover{
-                background-color:$primary-color;
+                background-color:none;
                 border: transparentize($color: #000000, $amount: 0);
             }
+            
+        }
+        a.active.item{
+            background: none;
         }
     }
 

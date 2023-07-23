@@ -1,3 +1,10 @@
+$primary-color: #cfb2b2;
+$color-2: #8a5a8291;
+$color-3: gray;
+$color-4:#eeecec;
+$color-5:#000000;
+$color-6: #552e4e91;
+
 .contact {
    
     height: 100vh !important;
@@ -13,11 +20,11 @@
   
     &__title {
 
-      color: white;
+      color: $primary-color;
       text-align: center;
       height: 10%;
       h1 {
-        text-shadow: 2px 2px 4px rgba(250, 248, 248, 0.5);
+        text-shadow: 8px 8px 14px $color-2;
         font-size: 50px;
       }
     }
@@ -64,7 +71,7 @@
           cursor: pointer;
   
           &:hover {
-            background-color: #ccc;
+            background-color: $primary-color;
             color: black;
           }
         }

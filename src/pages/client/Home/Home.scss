@@ -1,3 +1,10 @@
+$primary-color: #cfb2b2;
+$color-2: #8a5a8291;
+$color-3: gray;
+$color-4:#eeecec;
+$color-5:#000000;
+$color-6: #552e4e91;
+
 .home {
   height: 100vh !important;
   width: 100% !important;
@@ -10,9 +17,10 @@
   
   .home__title {
     margin: 10%;
+    color: #c67e7e;
     h1 {
       font-size: 50px;
-      text-shadow: 2px 2px 4px rgba(7, 7, 7, 0.5);
+      text-shadow: 8px 8px 14px $color-2;
     }
   }
   

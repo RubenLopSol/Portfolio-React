@@ -1,6 +1,10 @@
 $primary-color: #cfb2b2;
 $color-2: #8a5a8291;
 $color-3: gray;
+$color-4:#eeecec;
+$color-5:#000000;
+$color-6: #552e4e91;
+$color-7: #552e4e;
 
 .header-page{
 
@@ -8,7 +12,16 @@ $color-3: gray;
   height: 100%;
   margin-top: 1rem;
   text-align: center;
-   
+
+  .ui.toggle.checkbox label{
+    color: $color-7;
+  }
+
+  .ui.toggle.checkbox input:checked~label{
+    color: $color-7;
+  }
+
+  
   &__translator{
         
     display: flex;
@@ -16,12 +29,12 @@ $color-3: gray;
     align-items: flex-start;
     margin-right: 20px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-        
+    color: $color-7;
     i.language.big.icon{
         margin-right: 20px !important;
     }
   }
-
+  
   &__hide-nav{
     position: absolute;
     left: 15px;

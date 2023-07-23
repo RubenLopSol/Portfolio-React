@@ -4,6 +4,7 @@ $color-3: gray;
 $color-4:#eeecec;
 $color-5:#000000;
 $color-6: #552e4e91;
+$color-7: #552e4e;
 
 
 .left-menu {
@@ -14,6 +15,7 @@ $color-6: #552e4e91;
   justify-content: center;
   align-items: center;
   margin-top: 2%;
+  color: $color-7;
 
   @media (max-width: 768px) {
     .left-menu{
@@ -137,7 +139,7 @@ $color-6: #552e4e91;
         justify-content: space-around;
         align-items: center;
 
-        margin-top: 15%;
+        margin-top: 5%;
     }
 
 
@@ -206,7 +208,7 @@ $color-6: #552e4e91;
       }
 
       &__net {
-        margin-top: 5%;
+        margin-top: 2%;
         align-items: center;
 
         a {

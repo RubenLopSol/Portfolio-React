@@ -1,4 +1,7 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useContext} from 'react';
+
+import LanguageContext from '../../../LanguageContext'
+
 import { useTranslation } from 'react-i18next';
 
 import { Loader } from "semantic-ui-react";
@@ -13,6 +16,8 @@ import './Home.scss';
 export function Home() {
 
   const { t } = useTranslation();
+
+  const { language } = useContext(LanguageContext);
 
   const { loading, error, about, getAbout } = useAbout();
   
@@ -31,7 +36,7 @@ export function Home() {
     return <div>Error: {error.message}</div>;
   }
 
-
+  console.log(about)
 
 
   return (
