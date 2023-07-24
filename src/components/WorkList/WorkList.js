@@ -1,4 +1,5 @@
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react'
+import LanguageContext from '../../LanguageContext';
 import { useTranslation } from 'react-i18next';
 
 import { Table, Image, Button, Icon, Modal } from 'semantic-ui-react'
@@ -8,7 +9,8 @@ import './WorkList.scss'
 
 export function WorkList(props) {
 
-    const { work } = props
+    const { work } = props;
+    const { language } = useContext(LanguageContext);
     const { t } = useTranslation();
 
     const [open, setOpen] = useState(false);
@@ -42,17 +44,32 @@ export function WorkList(props) {
                     <Table.Body key={index}>
                         <Table.Row className='row'>
                             <Table.Cell> <Image src={`${work.logo}`}/> <strong>{work.company}</strong>  </Table.Cell>
+                        {language==="en" ? 
                             <Table.Cell>
                                 <Button
                                     icon
                                     basic
                                     color='blue'
-                                    onClick={() => handleOpenModal(work.description)}
+                                    onClick={() => handleOpenModal(work.description_en)}
+                                >
+                                    <Icon name='info' /> <span>Info</span>
+                                </Button>    
+                            
+                            </Table.Cell> :
+
+                                                        <Table.Cell>
+                                <Button
+                                    icon
+                                    basic
+                                    color='blue'
+                                    onClick={() => handleOpenModal(work.description_es)}
                                 >
                                     <Icon name='info' /> <span>Info</span>
                                 </Button>    
                             
                             </Table.Cell>
+                        }    
+                        
                             <Table.Cell>{work.year}</Table.Cell>
                             <Table.Cell>{work.position}</Table.Cell>
                             

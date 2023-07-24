@@ -36,8 +36,6 @@ export function Home() {
     return <div>Error: {error.message}</div>;
   }
 
-  console.log(about)
-
 
   return (
     <div className='home' style={{ backgroundImage: `url(${about[0].image})`, backgroundSize: 'cover', backgroundPosition: 'center',}}>
@@ -45,7 +43,11 @@ export function Home() {
         <h1>{t('About me')}</h1>
       </div>
       <div className='home__text'>
-        <p>{about[0].description}</p>
+      {language === "en" ?
+        <p>{about[0].description_en}</p> :
+        <p>{about[0].description_es}</p>
+      
+      }
       </div>
     </div>
   );

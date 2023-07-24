@@ -1,4 +1,5 @@
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react'
+import LanguageContext from '../../LanguageContext'
 import { useTranslation } from 'react-i18next';
 
 import { map } from 'lodash'
@@ -10,6 +11,7 @@ import './EducationList.scss'
 export function EducationList(props) {
 
   const { education } = props;
+  const { language } = useContext(LanguageContext);
   const { t } = useTranslation();
 
 
@@ -47,17 +49,35 @@ export function EducationList(props) {
           <Table.Body>
               {map(education, (education, index) => (
               <Table.Row key={index} >
-                  <Table.Cell width={2} className='row'>{education.title}</Table.Cell>
+                {language==="en" ? 
+                  <Table.Cell width={2} className='row'>{education.title_en}</Table.Cell> :
+                  <Table.Cell width={2} className='row'>{education.title_es}</Table.Cell>
+                }
+
+                {language==="en" ? 
                   <Table.Cell width={2} className='row'>
                       <Button
                           icon
                           basic
                           color='blue'
-                          onClick={() => handleOpenModal(education.description, education.year, education.center )}
+                          onClick={() => handleOpenModal(education.description_en, education.year, education.center )}
+                      >
+                          <Icon name='info' /> <span>Info</span>
+                      </Button>
+                  </Table.Cell> :
+
+                  <Table.Cell width={2} className='row'>
+                      <Button
+                          icon
+                          basic
+                          color='blue'
+                          onClick={() => handleOpenModal(education.description_es, education.year, education.center )}
                       >
                           <Icon name='info' /> <span>Info</span>
                       </Button>
                   </Table.Cell>
+                }
+
                   <Table.Cell width={2} className='row'>
                   { education.certificate && (
                       <Button icon basic color='yellow' as={Link} to={education.certificate}> <Icon name='file code' /> <span>{t("Certificate")}</span> </Button>

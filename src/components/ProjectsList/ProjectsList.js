@@ -1,4 +1,5 @@
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react';
+import LanguageContext from '../../LanguageContext';
 import { useTranslation } from 'react-i18next';
 import { Table, Button, Icon, Modal } from 'semantic-ui-react'
 import { Link } from "react-router-dom";
@@ -9,6 +10,7 @@ import './ProjectsList.scss'
 export function ProjectsList(props) {
 
     const { project } = props;
+    const { language } = useContext(LanguageContext);
     const { t } = useTranslation();
     
     const [open, setOpen] = useState(false);
@@ -45,17 +47,34 @@ export function ProjectsList(props) {
             <Table.Body>
                 {map(project, (project, index) => (
                 <Table.Row key={index} >
-                    <Table.Cell width={2} className='row'>{project.title}</Table.Cell>
+                {language==="en" ? 
+                    <Table.Cell width={2} className='row'>{project.title_en}</Table.Cell> :
+                    <Table.Cell width={2} className='row'>{project.title_es}</Table.Cell> 
+                }
+
+                {language==="en" ? 
                     <Table.Cell width={2} className='row'>
                         <Button
                             icon
                             basic
                             color='blue'
-                            onClick={() => handleOpenModal(project.description)}
+                            onClick={() => handleOpenModal(project.description_en)}
+                        >
+                            <Icon name='info' /> <span>Info</span>
+                        </Button>
+                    </Table.Cell> :
+
+                    <Table.Cell width={2} className='row'>
+                        <Button
+                            icon
+                            basic
+                            color='blue'
+                            onClick={() => handleOpenModal(project.description_es)}
                         >
                             <Icon name='info' /> <span>Info</span>
                         </Button>
                     </Table.Cell>
+                }
                     <Table.Cell width={2} className='row'>
                     { project.code_front && (
                         <Button icon basic color='yellow' as={Link} to={project.code_front}> <Icon name='file code' /> <span>Front</span> </Button>

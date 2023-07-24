@@ -1,4 +1,5 @@
-import React from 'react'
+import React, {useContext} from 'react'
+import LanguageContext from '../../../LanguageContext';
 import Slider from 'react-slick';
 import { Card,  Image } from "semantic-ui-react";
 import { map } from 'lodash'
@@ -13,6 +14,7 @@ import './CarouselHobies.scss'
 export function CarouselHobies(props) {
 
   const { hobby } = props
+  const { language } = useContext(LanguageContext);
 
   const settings = {
     dots: true, // Muestra los indicadores de puntos
@@ -41,11 +43,14 @@ export function CarouselHobies(props) {
               <Card key={index}>
                 <Image src={hobby.image} wrapped ui={false} />
                 <Card.Content>
-                  <Card.Header>{hobby.title}</Card.Header>
-
-                  <Card.Description>
-                    {hobby.description}
-                  </Card.Description>
+                {language==="en" ?
+                  <Card.Header>{hobby.title_en}</Card.Header> :
+                  <Card.Header>{hobby.title_es}</Card.Header>
+                }
+                {language==="en" ?
+                  <Card.Description> {hobby.description_en} </Card.Description> :
+                  <Card.Description> {hobby.description_es} </Card.Description>
+                }
                 </Card.Content>   
               </Card>
             ))}
