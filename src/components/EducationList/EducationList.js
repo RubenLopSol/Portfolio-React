@@ -47,7 +47,7 @@ export function EducationList(props) {
           </Table.Header>
 
           <Table.Body>
-              {map(education, (education, index) => (
+              {map(education.reverse(), (education, index) => (
               <Table.Row key={index} >
                 {language==="en" ? 
                   <Table.Cell width={2} className='row'>{education.title_en}</Table.Cell> :

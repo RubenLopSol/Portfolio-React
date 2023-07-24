@@ -15,7 +15,7 @@ export function HeaderPage(props) {
 
   const { i18n } = useTranslation();
 
-  const [isEnglish, setIsEnglish] = useState(i18n.language === 'en');
+  const [isEnglish, setIsEnglish] = useState(!i18n.language || i18n.language === 'en');
 
   const changeLang = (newLanguage) => {
     setLanguage(newLanguage);
