@@ -39,7 +39,7 @@ export function LeftMenu() {
     return <div>Error: {error.message}</div>;
   }
 
-console.log(logos);
+
   return (
     <div className='left-menu'>
       { loading ? <p>Cargando</p> :
