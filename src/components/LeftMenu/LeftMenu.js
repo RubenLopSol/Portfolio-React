@@ -1,19 +1,20 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect, useState, useContext} from 'react'
+import LanguageContext from '../../LanguageContext'
 import { Image, Icon, Loader } from "semantic-ui-react";
-
+import { useData, useLogos } from '../../hooks'
 import githubLogo from '../../assets/github-mark.png';
 import linkedinLogo from '../../assets/icons8-linkedin-96.png'
 
 import { MyCarousel } from '../Carousel/LeftMenu'
-import { useData, useLogos } from '../../hooks'
 
 import './LeftMenu.scss'
 
 export function LeftMenu() {
 
+  const { language } = useContext(LanguageContext);
   const { loading, error, data, getData } = useData();
-  const {logos, getLogos} = useLogos();
-  
+  const {logosLoading, logos, getLogos} = useLogos([]);
+   
 
   const [startCarousel, setStartCarousel] = useState(false);
   
@@ -30,7 +31,7 @@ export function LeftMenu() {
 
   const openCarousel = () => setStartCarousel((prev) => !prev);
 
-  if (loading) {
+  if (loading || logosLoading) {
     return <Loader active>Loading...</Loader>;
   }
 
@@ -38,7 +39,7 @@ export function LeftMenu() {
     return <div>Error: {error.message}</div>;
   }
 
-
+console.log(logos);
   return (
     <div className='left-menu'>
       { loading ? <p>Cargando</p> :
@@ -48,11 +49,18 @@ export function LeftMenu() {
             <Image src={ data[0].image } avatar size='medium' />
             <div className='left-menu__main__name'>
               <h1 className='focus-in-expand'>{data[0].name}</h1>
-              <h3>{data[0].position}</h3>
+            {language==="en" ? 
+              <h3>{data[0].position_en}</h3> : 
+              <h3>{data[0].position_es}</h3>
+            }  
             </div>
         </div>
-
-        <MyCarousel key={startCarousel} startCarousel={startCarousel}  logos={logos} />
+        
+       { logos && startCarousel &&
+        <MyCarousel startCarousel={startCarousel} logos={logos} />
+       }
+       
+          
 
         <div className='left-menu__links' >
 

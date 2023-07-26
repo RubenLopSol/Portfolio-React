@@ -3,29 +3,29 @@ import { getLogosApi } from '../api/logos'
 
 export function useLogos() {
 
-    const [ loading, setLoading ] = useState(true);
-    const [ error, setError ] = useState(false);
+    const [ logosLoading, setLogosLoading ] = useState(true);
+    const [ logosError, setLogosError ] = useState(false);
     const [ logos, setLogos ] = useState(null);
     
 
     const getLogos = async () => {
         try {
 
-            setLoading(true);
+            setLogosLoading(true);
             const response = await getLogosApi();
-            setLoading(false);
+            setLogosLoading(false);
             setLogos(response);
             
         } catch (error) {
             
-            setLoading(false);
-            setError(error);
+            setLogosLoading(false);
+            setLogosError(error);
         }
     }
 
     return {
-        loading,
-        error,
+        logosLoading,
+        logosError,
         logos,
         getLogos,
 

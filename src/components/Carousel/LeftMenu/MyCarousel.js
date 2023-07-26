@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 import Slider from 'react-slick';
 import { map } from 'lodash';
 
@@ -8,8 +8,8 @@ import 'slick-carousel/slick/slick-theme.css';
 import './Carousel.scss';
 
 export function MyCarousel(props) {
-
-  const { logos } = props;
+  
+  const {logos} = props;
 
   const settings = {
     dots: false, // Muestra los indicadores de puntos

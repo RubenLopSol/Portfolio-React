@@ -1,4 +1,4 @@
-import React, {useState, useContext} from 'react';
+import React, {useState, useEffect, useContext} from 'react';
 import LanguageContext from '../../LanguageContext'
 import { useTranslation } from 'react-i18next';
 
@@ -17,19 +17,29 @@ export function HeaderPage(props) {
 
   const [isEnglish, setIsEnglish] = useState(!i18n.language || i18n.language === 'en');
 
+  useEffect(() => {
+    function start() {
+       setLanguage("en");
+       setIsEnglish(true);
+    }
+    
+    start();
+  },[])
+  
+
   const changeLang = (newLanguage) => {
     setLanguage(newLanguage);
+    console.log(newLanguage)
   };
 
   const handleToggleChange = () => {
-    const newLanguage = isEnglish ? 'en' : 'es';
+    const newLanguage = isEnglish ? 'es' : 'en';
     i18n.changeLanguage(newLanguage);
     changeLang(newLanguage);
     setIsEnglish(!isEnglish);
   };
 
-    console.log(language)
-
+  
   return (
     <div className='header-page'>
       
@@ -43,8 +53,8 @@ export function HeaderPage(props) {
        
         <Checkbox 
         toggle
-        checked={isEnglish}
-        label={isEnglish ? 'Español' : 'English'}
+        checked={!isEnglish}
+        label={isEnglish ? 'English' : 'Español'}
         onChange={handleToggleChange} 
         className='custom-toggle' 
         />
