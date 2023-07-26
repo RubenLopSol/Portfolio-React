@@ -3,7 +3,6 @@ import { Error404 } from "../pages";
 import { BasicLayout } from '../layouts';
 
 
-
 const routes = [...routesClient, {
     path:"*",
     layout:BasicLayout,
