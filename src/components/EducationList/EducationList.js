@@ -40,7 +40,7 @@ export function EducationList(props) {
           <Table.Header className='header'>
               <Table.Row >
               <Table.HeaderCell>{t("Course")}</Table.HeaderCell>
-              <Table.HeaderCell><Icon name='info' /></Table.HeaderCell>
+              <Table.HeaderCell>{t("Information")}</Table.HeaderCell>
               <Table.HeaderCell>{t("Certificate")}</Table.HeaderCell>
 
               </Table.Row>

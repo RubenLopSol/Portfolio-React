@@ -37,7 +37,7 @@ export function ProjectsList(props) {
             <Table.Header className='header'>
                 <Table.Row >
                 <Table.HeaderCell>{t("Project")}</Table.HeaderCell>
-                <Table.HeaderCell><Icon name='info' /></Table.HeaderCell>
+                <Table.HeaderCell>{t("Information")}</Table.HeaderCell>
                 <Table.HeaderCell>{t("Frontend")}</Table.HeaderCell>
                 <Table.HeaderCell>{t("Backend")}</Table.HeaderCell>
                 <Table.HeaderCell>{t("Deployment")}</Table.HeaderCell>

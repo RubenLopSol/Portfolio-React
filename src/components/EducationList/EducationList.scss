@@ -35,10 +35,11 @@ $color-text: black;
         border: 3px solid $color-5;
         color: $color-4;
         font-size: 20px;
-
-
+        
+        
         td.two.wide.row{
-            text-align: left;
+            text-align: center;
+            
         }
         
         thead.header{
@@ -54,10 +55,14 @@ $color-text: black;
             border: 5px solid $color-5 !important;
             tr{
                 border-bottom: 3px solid $color-5 !important;
+                :first-child{
+                    text-align: left !important;
+                }
+                
             }
             
             
         }
-
+        
     }
 }
