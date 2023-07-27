@@ -39,7 +39,10 @@ $color-6: #552e4e91;
 
     p {
       font-size: x-large;
-      
+      @media (max-width: 768px) {
+        font-size: large;
+
+      }
     }
 
 

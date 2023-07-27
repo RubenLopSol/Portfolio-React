@@ -9,7 +9,7 @@ import './HeaderPage.scss'
 
 export function HeaderPage(props) {
 
-  const { language, setLanguage } = useContext(LanguageContext);
+  const { setLanguage } = useContext(LanguageContext);
 
   const {pathname} = useLocation();
 

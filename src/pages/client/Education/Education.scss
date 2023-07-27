@@ -11,7 +11,7 @@ $color-6: #552e4e91;
     height: 100vh !important;
     width: 100% !important;
     margin: 10px;
-    overflow: auto;
+    
 
     
     &__title{
@@ -31,7 +31,7 @@ $color-6: #552e4e91;
     &__list{
         
         
-        overflow: scroll;
+        overflow: auto;
         margin-top: 8%;
         margin-bottom: 10rem;
         overflow: auto;

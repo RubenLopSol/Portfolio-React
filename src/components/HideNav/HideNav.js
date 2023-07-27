@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 import { Menu } from "semantic-ui-react";
 import { useTranslation } from 'react-i18next';
 
-import menu from '../../assets/menu-hamburguesa.png'
+import menu from '../../assets/pngwing.com.png'
 
 import './HideNav.scss'
 
