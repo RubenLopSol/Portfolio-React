@@ -9,33 +9,33 @@ $shadow: rgba(250, 248, 248, 0.5);
 
 .work {
     
-    height: 100vh !important;
+    height: 100% !important;
     width: 100% !important;
+    padding: 20px;
     margin: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    gap: 40px;
     
     
     
     
     .work__title{
-        width: 100%;
-        margin: auto;
+        margin-top: 40px;
+        padding: 20px;
         color: $primary-color;
         text-align: center ;
         text-shadow: 8px 8px 14px $color-2;
         h1 {
-            margin: 5rem !important;
+
             font-size: 50px;
           }
     }
     
     .work__list{
-        height: 100vh !important;
+        height: 100% !important;
         width: 100%;
-        margin-bottom: 10rem;
         overflow: auto;
     }
 

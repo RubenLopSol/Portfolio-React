@@ -18,6 +18,11 @@ $color-text: black;
         .header{
             display: none !important;                
         }
+        table.ui.table{
+            td.two.wide.row{
+                text-align: center !important;
+            }
+        }
     }
    
     table.ui.table{
@@ -27,6 +32,11 @@ $color-text: black;
         border: 3px solid $color-5;
         color: $color-4;
         font-size: 20px;
+
+        td.two.wide.row{
+            text-align: left;
+        }
+
         thead.header{
             th{
                 background-color: $color-5;

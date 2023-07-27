@@ -15,13 +15,11 @@ $color-6: #552e4e91;
     text-align: center;
     display: flex;
     flex-direction: column;
-
+    gap: 40px;
 
   }
   
   .hobies__title {
-    
-    // height: 10%;
     width: auto;
     margin: 5% auto;
     color: $primary-color;
@@ -36,12 +34,10 @@ $color-6: #552e4e91;
 
     height: 100% !important;
     width: 100%;
-    margin-top: 10%;
-    overflow: auto;
-    overflow-x: hidden;
-    
+    margin: auto;
   }
-
+  
+     
 
   
 

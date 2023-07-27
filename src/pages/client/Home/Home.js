@@ -38,7 +38,7 @@ export function Home() {
 
 
   return (
-    <div className='home' style={{ backgroundImage: `url(${about[0].image})`, backgroundSize: 'cover', backgroundPosition: 'center',}}>
+    <div className='home'>
       <div className='home__title'>
         <h1>{t('About me')}</h1>
       </div>
