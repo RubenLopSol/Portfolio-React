@@ -32,7 +32,7 @@ export function Hobies() {
     <div className='hobies' >
       
         <div className='hobies__title'>
-          <h1>Hobies</h1>
+          <h1>Hobbies</h1>
         </div>
 
         <div className='hobies__cards'>

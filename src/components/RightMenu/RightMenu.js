@@ -45,7 +45,7 @@ function Nav(props){
       </Menu.Item>
 
       <Menu.Item as={Link} to={"/hobies"} active={pathname === "/hobies"}>
-        <Icon circular name='bolt' size='big'/> &nbsp; <strong>{t("Hobies")}</strong> 
+        <Icon circular name='bolt' size='big'/> &nbsp; <strong>{t("Hobbies")}</strong> 
       </Menu.Item>
 
       <Menu.Item as={Link} to={"/education"} active={pathname === "/education"}>
