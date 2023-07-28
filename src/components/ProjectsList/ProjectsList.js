@@ -87,7 +87,7 @@ export function ProjectsList(props) {
                     </Table.Cell>
                     <Table.Cell width={2} className='row'>
                     { project.deployment && (
-                        <Button icon basic color='green' as={Link} to={project.deployment}> <Icon name='play' /> <span>Defloyment</span> </Button>
+                        <Button icon basic color='green' as={Link} to={project.deployment}> <Icon name='play' /> <span>Deployment</span> </Button>
                     )}
                     </Table.Cell>
                 </Table.Row> 
