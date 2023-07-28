@@ -31,7 +31,7 @@ export function EducationList(props) {
     setOpen(false);
   };
 
-  const sortedEducation = education.slice().sort((a, b) => a.orden - b.orden);
+  
 
   return (
     <div className='education-list'>
@@ -49,7 +49,7 @@ export function EducationList(props) {
           </Table.Header>
 
           <Table.Body>
-              {map(sortedEducation, (education, index) => (
+              {map(education, (education, index) => (
               <Table.Row key={index} >
                 {language==="en" ? 
                   <Table.Cell width={2} className='row'>{education.title_en}</Table.Cell> :
