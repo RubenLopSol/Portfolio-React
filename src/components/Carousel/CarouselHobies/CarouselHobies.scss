@@ -8,7 +8,10 @@ $color-6: #552e4e91;
     height: 90%;
     width: 100%;
 
- 
+    .slick-slide{
+      margin-top: 100px ;
+    }
+
     .slick-slide .card {
 
       height: 100% !important;
@@ -52,11 +55,12 @@ $color-6: #552e4e91;
     .slick-prev, .slick-next{
       top: 20%;
       right: 14%;
+      display: none !important;
 
     }
 
     .slick-dots{
-      bottom:-20px !important;
+      top: 20px !important;
     }
     .slick-dots li button:before {
       color: $color-4 !important;
