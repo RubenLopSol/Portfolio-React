@@ -38,8 +38,8 @@ export function HideNav(props) {
             <strong>{t("Home")}</strong> 
             </Menu.Item>
 
-            <Menu.Item as={Link} to={"/hobies"} active={pathname === "/hobies"} onClick={handleCloseNav}>
-            <strong>{t("Hobies")}</strong> 
+            <Menu.Item as={Link} to={"/hobbies"} active={pathname === "/hobbies"} onClick={handleCloseNav}>
+            <strong>{t("Hobbies")}</strong> 
             </Menu.Item>
 
             <Menu.Item as={Link} to={"/education"} active={pathname === "/education"} onClick={handleCloseNav}>
