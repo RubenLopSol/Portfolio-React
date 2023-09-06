@@ -25,7 +25,7 @@ Here are the key technologies and tools I used to build this portfolio:
   - Drf-yasg: Documentation.
   - Pillow: Processing IMG.
   - PyJWT: Autentication, authorization.
-  - Whitenoise: Statick files.
+  - Whitenoise: Static files.
   - Gunicorn: It handles incoming HTTP requests and directs them to Django for processing.
 
 
